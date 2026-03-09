@@ -1,4 +1,5 @@
 ------------------------------ First method: ----------------------------------
+
 Baseline Alignment:
 
 Oblicz średnią globalną wszystkich ocen.
@@ -10,15 +11,19 @@ Dla każdego filmu oblicz jego bias.
 Twoja funkcja rate powinna zwracać: score=mean+bias_user+bias_movie.
 
 ----------------------------  Second method: -------------------------------
+
 Wide & Deep Learning
+
 Wide + Deep: Model składa się z dwóch części działających równolegle: szerokiej (Wide) i głębokiej (Deep). Wynik końcowy to suma ich "opinii".
 
 Część WIDE (Zapamiętywanie): Działa jak prosta regresja. Uczy się konkretnych reguł na pamięć, np. "Użytkownik X zawsze daje 5 gwiazdek filmom z serii Star Wars". Jest świetna do wyłapywania oczywistych schematów.
 
 Część DEEP (Generalizacja): To wielowarstwowa sieć neuronowa z embeddingami. Szuka ukrytych powiązań. Nawet jeśli nigdy nie oglądałeś niszowego anime, sieć Deep zauważy, że lubisz dynamiczny montaż i mroczny klimat, więc może Ci je zaproponować.
+
 W skrócie: Wide & Deep to próba połączenia logiki ("pamiętam, co lubisz") z intuicją ("czuję, że to też Ci podejcie").
 
 ---------------------------  Third method: -------------------------------
+
 SVD++ to ulepszona wersja klasycznego algorytmu SVD (Singular Value Decomposition)
 
 Fundament (Klasyczne SVD): Algorytm rozbija macierz ocen na dwie mniejsze: jedną opisującą użytkowników i drugą opisującą filmy. Każdy film i użytkownik dostaje zestaw ukrytych cech (np. "akcja", "budżet", "klimat").
@@ -36,6 +41,7 @@ Killer Funkcja na Konkursy: SVD++ wygrał wiele konkursów (w tym słynny Netfli
 W skrócie: SVD++ to klasyczne SVD na sterydach, które mówi: "Nie patrzę tylko na to, ile gwiazdek dałeś, ale też na to, co w ogóle zdecydowałeś się włączyć".
 
 --------------------------- Forth method: ------------------------------
+
 NCF (Neural Collaborative Filtering) to model, który mówi: „Skoro mamy sieci neuronowe, to przestańmy ograniczać się do prostego mnożenia macierzy (jak w SVD) i pozwólmy sztucznej inteligencji samej nauczyć się reguł rządzących gustem”.
 
 Zastąpienie matematyki siecią (MLP): W klasycznych systemach (SVD) używa się iloczynu skalarnego (mnożenia liczb). NCF zastępuje to mnożenie wielowarstwową siecią neuronową (Multi-Layer Perceptron), która potrafi wykryć nieliniowe, skomplikowane zależności, których prosta matematyka nie widzi.
